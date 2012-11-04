@@ -1,0 +1,8 @@
+1	aZaaZZ 07 Mais __um CD	1987	metal	compositor	autor	120	0
+2	titulo cd 2	2005	metal	compositor bla1	autor bla1	5	0
+3	titulo cd 3	2005	samba	compositor bla2	autor bla3	5	0
+4	titulo cd 4	2005	pagode	compositor bla2	autor bla3	5	0
+5	titulo cd 5	2005	hard rock	compositor bla5	autor bla3	5	1
+6	titulo cd 5	1992	hard rock	compositor bla5	autor bla1	5	0
+7	titulo cd 6	1977	hard rock	compositor bla2	autor bla5	0	1
+8	AAAAAA_aZaaZZ 07 Mais __um CD	1990	rock	compositor	autor	120	1

@@ -1,0 +1,1 @@
+# Projeto de estrutura de e-commerce desenvolvido a partir da aula 4 do curso "PHP II" da Season.

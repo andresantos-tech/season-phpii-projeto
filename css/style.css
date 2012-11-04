@@ -1,0 +1,96 @@
+html, body {width: 100%; height: 100%;}
+ul li {list-style: none;}
+
+#distance {width: 1px; height: 50%; margin-bottom: -150px; float: left;}
+
+h2 {clear: both;}
+p {font-size: 18px;}
+
+#boxLogin {width: 406px; margin: 0 auto; clear: both; position: relative;}
+#boxLogin h1 {text-align: center; padding-bottom: 20px;}
+#boxLogin .navbar-inner {padding: 30px 0;}
+#formLogin {width: 400px;}
+#formLogin .controls {margin-left: 110px; position: relative;}
+	.infos-label {display: none; font-size: 12px; font-weight: normal; position: absolute; top: 10px; left: -55px;}
+#formLogin .control-label {width: 94px;}
+	#btnSubmit {margin-right: 70px; float: right;}
+	
+	.imgLoading {display: none; width: 59px; height: 22px; background: #5682DA; position: absolute; top: 9px; left: 159px; z-index: 100;}
+	.imgLoading img {display: block; height: 100%; margin: 0 auto;}
+	
+	.bgDisabled {display: none; width: 406px; height: 264px; position: absolute; top: 0; left: 0; z-index: 100;}
+	
+#boxContent {width: 1000px; height: auto; min-height: 100%; padding: 20px 0; margin: 0 auto;}
+#boxContent .inner {padding: 0 20px;}
+#boxContent .control-label {width: 88px; text-align: left;}
+#boxContent .controls {margin-left: 88px; position: relative;}
+#boxContent h1 {display: inline; font-size: 16px; padding-right: 20px;}
+#boxContent h1 span {font-weight: normal; font-size: 14px;}
+    .infoTop {padding: 0 20px 10px 20px; margin-bottom: 20px; border-bottom: 1px solid #000;}
+#boxContent .nav {padding: 10px; background: #fff; border-radius: 10px;}
+#boxContent table a.btn-success {margin-bottom: 10px;}
+
+
+#formCadastrar {width: auto; margin-bottom: 0; position: relative;}
+#formCadastrar .bgDisabled {width: 413px; height: 185px;}
+#formCadastrar .imgLoading {width: 69px; top: 9px; left: 205px;}
+#formCadastrar #btnSubmit {margin-top: 20px; float: none;}
+
+hr {border-top-color: #a9aef9; border-bottom-color: #eaebfc;}
+table.table {width: 540px; margin-bottom: 20px; background: #fff;}
+table.table th, table.table td {vertical-align: middle; text-align: center;}
+.btn-danger {font-weight: normal;}
+.imgLogado {margin-bottom: 20px;}
+
+#wrapper {width: 1000px; height: auto; min-height: 100%; margin: 0 auto; text-transform: uppercase; border: 1px solid #D4D4D4; border-top: 0; border-bottom: 0; background: #fff;}
+#wrapper > .inner {padding: 20px;}
+    #header {padding: 10px; border-radius: 10px; background: #eee;}
+        h1 {text-align: left;}
+        h4 {font-size: 12px; margin-bottom: 0;}
+    #header .boxTlt {width: 368px; height: auto; float: left;}
+    
+        #formBusca {width: 368px; height: auto; float: right;}
+        #boxCarrinho {width: 200px; height: auto; float: left;}
+        #boxCarrinho a {display: block; width: 145px; height: 22px; padding: 67px 12px 0 0; margin: 0 auto; text-align: center; text-transform: none; background: url(../img/btn-carrinho.png) no-repeat top;}
+    
+    #content {padding: 20px 0; text-transform: none; border-bottom: 1px solid #000;}
+    
+        .boxDestaques {border-top: 1px solid #000; border-bottom: 1px solid #000;}
+        .boxDestaques ul {width: 935px; float: left;}
+        .boxDestaques ul li {width: 286px; height: auto; overflow: hidden; padding: 0 0 10px 0; margin: 0 25px 20px 0; background: #eee; float: left;}
+        .boxDestaques ul li.line {width: 935px; height: 1px; padding: 0; margin: 0; background: #fff; clear: left;}
+        .boxDestaques ul li .boxImg {width: 286px; height: 286px; overflow: hidden;}
+        .boxDestaques ul li .boxImg img {display: block; width: 100%; height: 100%;}
+        .boxDestaques h4 {font-size: 20px; padding: 0 14px;}
+        .boxDestaques p {font-size: 12px; padding: 0 14px;}
+        .boxDestaques .btn-group {padding: 0 0 0 14px;}
+        
+        .boxItens {}
+        .boxItens ul {width: 935px; float: left;}
+        .boxItens ul li {width: 206px; height: auto; overflow: hidden; padding: 0 0 10px 0; margin: 0 25px 20px 0; background: #eee; float: left;}
+        .boxItens ul li.line {width: 935px; height: 1px; padding: 0; margin: 0; background: #fff; clear: left;}
+        .boxItens ul li .boxImg {width: 206px; height: 206px; overflow: hidden;}
+        .boxItens ul li .boxImg img {display: block; width: 100%; height: 100%;}
+        .boxItens h4 {font-size: 20px; padding: 0 14px;}
+        .boxItens p {font-size: 12px; padding: 0 14px;}
+        .boxItens .btn {display: block; margin: 0 14px 4px 14px;}
+        
+        p.infoBusca {padding: 0; margin: -14px 0 30px 0;}
+        
+        .boxInterna {padding: 20px 0;}
+        .boxInterna .boxImg {width: 300px; height: 300px; margin-right: 20px; overflow: hidden; float: left;}
+        .boxInterna .boxImg img {display: block; width: 100%; height: 100%;}
+        .boxInterna h4 {font-size: 26px; padding-bottom: 22px;}
+        
+        .boxCarrinho table.table {width: 100%;}
+        .boxCarrinho table.table th, .boxCarrinho table.table td {text-align: center;}
+        .boxCarrinho table.table a {float: none;}
+        .boxCarrinho table.table a.btn-primary {margin-bottom: 10px;}
+        
+        .boxCarrinho .quantidade {margin: 0;}
+        
+        div.alert {display: none;}
+        .alert-error-login {width: 352px; position: absolute; top: -47px; left: 0;}
+    
+    #footer {padding-top: 20px}
+        address {color: #aaa; text-align: center;}
