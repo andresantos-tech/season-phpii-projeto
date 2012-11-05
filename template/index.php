@@ -34,7 +34,7 @@
                         <li>
                             <div class="boxImg"><a href="produto.php?id=<?php echo $cd['id']; ?>"><img class="img-rounded" src="img/fake.jpg" alt="<?php echo htmlspecialchars($cd['titulo']); ?>" /></a></div>
                             <h4><?php echo htmlspecialchars($cd['titulo']); ?></h4>
-                            <p><?php echo htmlspecialchars($cd['genero']); ?> - <?php echo $cd['ano']; ?></p>
+                            <p><?php echo htmlspecialchars($cd['genero']); ?> - <?php echo $cd['anoLancamento']; ?></p>
                             <a href="produto.php?id=<?php echo $cd['id']; ?>" class="btn btn-small"><span class="icon-music">&nbsp;</span> Ver detalhes</a>
                             <a href="carrinho.php?add=<?php echo $cd['id']; ?>" class="btn btn-small"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
                         </li>

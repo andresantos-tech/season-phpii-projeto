@@ -29,10 +29,10 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Título</a></li>
+                                <li><a href="#">T¬ítulo</a></li>
                                 <li><a href="#">Autor</a></li>
-                                <li><a href="#">Ano de lançamento</a></li>
-                                <li><a href="#">Gênero</a></li>
+                                <li><a href="#">Ano de lan¬çamento</a></li>
+                                <li><a href="#">G¬ênero</a></li>
                                 <li><a href="#">Compositor</a></li>
                                 <li><a href="#">Em estoque</a></li>
                             </ul>

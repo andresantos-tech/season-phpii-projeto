@@ -128,7 +128,8 @@ function getCds(){
 
 function getCdById($id){
 	settype($id, 'integer');
-	return array_pop(getCd('id', $id));
+	$cd = getCd('id', $id);
+	return array_pop($cd);
 }
 
 function getCdByAno($ano){
