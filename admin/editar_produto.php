@@ -23,9 +23,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $destaque = isset($_POST['destaque']) ? 1 : 0; 
     
     if(insereCd($titulo, $anoLancamento, $genero, $compositor, $autor, $qtdEstoque, $destaque, $id) === TRUE){
-	header('location: index.php#editar-produto-sucesso');
+		header('location: index.php#editar-produto-sucesso');
     } else {
-	header('location: editar_produto.php?id=' . $id . '#editar-produto-error');
+		header('location: editar_produto.php?id=' . $id . '#editar-produto-error');
     }
     
     exit;

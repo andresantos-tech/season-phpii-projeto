@@ -10,7 +10,13 @@
                         <p>Gênero: <strong><?php echo htmlspecialchars($produto['genero']); ?></strong></p>
                         <p>Compositor: <strong><?php echo htmlspecialchars($produto['compositor']); ?></strong></p><br />
                         <p><small><?php echo $produto['qtdEstoque']; ?> unidades disponíveis em estoque</small></p><br />
+                        
+                    <?php if($produto['qtdEstoque'] > 0) : ?>
                         <a href="carrinho.php?add=<?php echo $produto['id']; ?>&qtd=1" class="btn btn-primary"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
+                    <?php else : ?>
+                        <span class="btnIndisponivel">Produto indisponível</span>
+                    <?php endif; ?>
+                    
                     </div>
                     <br clear="all" />
                 </div>

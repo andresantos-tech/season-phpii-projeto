@@ -19,12 +19,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $compositor = isset($_POST['compositor']) ? $_POST['compositor'] : '';
     $autor = isset($_POST['autor']) ? $_POST['autor'] : '';
     $qtdEstoque = isset($_POST['qtdEstoque']) ? $_POST['qtdEstoque'] : '';
-    $destaque = isset($_POST['destaque']) ? 1 : 0; 
+    $destaque = isset($_POST['destaque']) ? 1 : 0;
     
     if(insereCd($titulo, $anoLancamento, $genero, $compositor, $autor, $qtdEstoque, $destaque) === TRUE){
-	header('location: index.php#cadastrar-produto-sucesso');
+		header('location: index.php#cadastrar-produto-sucesso');
     } else {
-	header('location: cadastrar_produto.php#cadastrar-produto-error');
+		header('location: cadastrar_produto.php#cadastrar-produto-error');
     }
     
     exit;
@@ -33,6 +33,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     
     $title = 'Cadastrar Cd | Admin';
     $menuCadCd = TRUE;
+	$tltH3 = 'Cadastrar Produto';
     $cd = array();
     
     require('template' . DS . 'header.php');

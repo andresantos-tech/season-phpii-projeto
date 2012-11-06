@@ -12,18 +12,32 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     
     $id = isset($_GET['add']) ? $_GET['add'] : '';
     $qtd = isset($_GET['qtd']) ? $_GET['qtd'] : '';
+    $remove = isset($_GET['remove']) ? $_GET['remove'] : '';
     
     if(!empty($id) && !empty($qtd)){
-        $qtdEstoque = getTotalCdsEstoque($id);
-    
-        if($qtdEstoque < $qtd){
-            header('carrinho.php#qtd-estoque-error');
-            exit;
+        $id = is_array($id) ? $id : array($id);
+        $qtd = is_array($qtd) ? $qtd : array($qtd);
+        
+        foreach($id as $key=>$item){
+            $qtdEstoque = getTotalCdsEstoque($item);
+        
+            if($qtdEstoque < $qtd[$key]){
+                header('location: carrinho.php#qtd-estoque-error');
+                exit;
+            }
+            
+            carrinhoAdicionar($item, $qtd[$key]);
         }
         
-        carrinhoAdicionar($id, $qtd);
         
         header('location: carrinho.php#cd-adicionado');
+        exit;
+    }
+    
+    if(!empty($remove)){
+        carrinhoRemover($remove);
+    
+        header('location: carrinho.php#cd-excluido');
         exit;
     }
     

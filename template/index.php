@@ -10,7 +10,13 @@
                             <p><?php echo htmlspecialchars($cdDestaque['genero']); ?> - <?php echo $cdDestaque['anoLancamento']; ?></p>
                             <div class="btn-group">
                                 <a href="produto.php?id=<?php echo $cdDestaque['id']; ?>" class="btn btn-small"><span class="icon-music">&nbsp;</span> Ver detalhes</a>
+                                
+                            <?php if($cdDestaque['qtdEstoque'] > 0) : ?>
                                 <a href="carrinho.php?add=<?php echo $cdDestaque['id']; ?>&qtd=1" class="btn btn-small"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
+                            <?php else : ?>
+                                <span class="btnIndisponivel">Produto indisponível</span>
+                            <?php endif; ?>
+                            
                             </div>
                         </li>
                         
@@ -36,7 +42,13 @@
                             <h4><?php echo htmlspecialchars($cd['titulo']); ?></h4>
                             <p><?php echo htmlspecialchars($cd['genero']); ?> - <?php echo $cd['anoLancamento']; ?></p>
                             <a href="produto.php?id=<?php echo $cd['id']; ?>" class="btn btn-small"><span class="icon-music">&nbsp;</span> Ver detalhes</a>
+                            
+                        <?php if($cd['qtdEstoque'] > 0) : ?>
                             <a href="carrinho.php?add=<?php echo $cd['id']; ?>&qtd=1" class="btn btn-small"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
+                        <?php else : ?>
+                            <span class="btnIndisponivel">Produto indisponível</span>
+                        <?php endif; ?>
+                        
                         </li>
                         
                         <?php if(($key + 1) % 4 == 0) : ?>

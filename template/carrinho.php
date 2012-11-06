@@ -19,7 +19,7 @@
                             
                         <?php foreach($carrinho as $key=>$itemCarrinho) : ?>
                             <tr>
-                                <td><?php echo $itemCarrinho['produto']['id']; ?></td>
+                                <td class="id"><?php echo $itemCarrinho['produto']['id']; ?></td>
                                 <td><div class="boxImg"><img src="img/fake.jpg" alt="<?php echo htmlspecialchars($itemCarrinho['produto']['titulo']); ?>" /></div></td>
                                 <td><?php echo htmlspecialchars($itemCarrinho['produto']['titulo']); ?></td>
                                 <td><?php echo htmlspecialchars($itemCarrinho['produto']['autor']); ?></td>
@@ -37,7 +37,7 @@
                     
                     <div class="btn-group">
                         <a class="btn btn-large" href="index.php"><span class="icon-shopping-cart">&nbsp;</span> Continuar Comprando</a>
-                        <a class="btn btn-primary btn-large" href="#1"><span class="icon-refresh">&nbsp;</span> Atualizar Carrinho</a>
+                        <a class="btn btn-primary btn-large btnAtualizarCarrinho" href="#"><span class="icon-refresh">&nbsp;</span> Atualizar Carrinho</a>
                     </div>
                 <?php endif; ?>
                     

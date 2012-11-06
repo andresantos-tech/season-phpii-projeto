@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" xml:lang="pt-BR" xmlns ="http://www.w3.org/1999/xhtml">
 <head>
     <title><?php echo $title; ?></title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
@@ -35,7 +35,6 @@
                                 <li><a href="#ano">Ano de lançamento</a></li>
                                 <li><a href="#genero">Gênero</a></li>
                                 <li><a href="#compositor">Compositor</a></li>
-                                <li><a href="#estoque">Em estoque</a></li>
                             </ul>
                         </div>
                     </div>

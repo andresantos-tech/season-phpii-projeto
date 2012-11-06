@@ -17,7 +17,7 @@ function insereCd($titulo, $anoLancamento, $genero, $compositor, $autor, $qtdEst
 	filtrarStr($compositor);
 	filtrarStr($autor);
 	
-	if(verificaCdCadastrado($titulo, $anoLancamento, $autor)){
+	if(verificaCdCadastrado($titulo, $anoLancamento, $autor) && $edit === FALSE){
 		return FALSE;
 	}
 	

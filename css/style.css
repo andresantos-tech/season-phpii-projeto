@@ -30,7 +30,6 @@ p {font-size: 18px;}
 #boxContent .nav {padding: 10px; background: #fff; border-radius: 10px;}
 #boxContent table a.btn-success {margin-bottom: 10px;}
 
-
 #formCadastrar {width: auto; margin-bottom: 0; position: relative;}
 #formCadastrar .bgDisabled {width: 413px; height: 185px;}
 #formCadastrar .imgLoading {width: 69px; top: 9px; left: 205px;}
@@ -54,7 +53,10 @@ table.table th, table.table td {vertical-align: middle; text-align: center;}
         #boxCarrinho a {display: block; width: 145px; height: 22px; padding: 67px 12px 0 0; margin: 0 auto; text-align: center; text-transform: none; background: url(../img/btn-carrinho.png) no-repeat top;}
     
     #content {padding: 20px 0; text-transform: none; border-bottom: 1px solid #000;}
-    
+        span.btnIndisponivel {padding-left: 10px; font-size: 14px; font-weight: bold; color: #e21414; float: right;}
+        .boxItens span.btnIndisponivel {display: block; text-align: center; float: none;}
+        .boxTxt span.btnIndisponivel {text-align: left; padding-left: 0; float: none;}
+        
         .boxDestaques {border-top: 1px solid #000; border-bottom: 1px solid #000;}
         .boxDestaques ul {width: 935px; float: left;}
         .boxDestaques ul li {width: 286px; height: auto; overflow: hidden; padding: 0 0 10px 0; margin: 0 25px 20px 0; background: #eee; float: left;}

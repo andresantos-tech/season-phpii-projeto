@@ -1,6 +1,7 @@
 <?php
 
 function carrinhoAdicionar($idProd, $qtd){
+	
 	settype($idProd, 'integer');
 	settype($qtd, 'integer');
 	

@@ -1,8 +1,12 @@
-1	aZaaZZ 07 Mais __um CD	1987	metal	compositor	autor	120	0
-2	titulo cd 2	2005	metal	compositor bla1	autor bla1	5	0
-3	titulo cd 3	2005	samba	compositor bla2	autor bla3	5	0
-4	titulo cd 4	2005	pagode	compositor bla2	autor bla3	5	0
-5	titulo cd 5	2005	hard rock	compositor bla5	autor bla3	5	1
-6	titulo cd 5	1992	hard rock	compositor bla5	autor bla1	5	0
-7	titulo cd 6	1977	hard rock	compositor bla2	autor bla5	0	1
-8	AAAAAA_aZaaZZ 07 Mais __um CD	1990	rock	compositor	autor	120	1
+1	Kill 'Em All	1982	Metal	Metallica	Metallica	50	0
+2	T.N.T.	1975	Hard Rock	AC/DC	AC/DC	5	0
+3	Back in Black	1980	Hard Rock	AC/DC	AC/DC	5	0
+4	High Voltage	1976	Hard Rock	AC/DC	AC/DC	7	0
+5	Overkill	1977	Heavy Metal	Motörhead	Motörhead	12	0
+6	Ace of Spades	1980	Heavy Metal	Motörhead	Motörhead	2	1
+7	Unleashed Memories	2001	Goth Metal	Lacuna Coil	Lacuna Coil	0	1
+8	Master of Puppets	1985	Metal	Metallica	Metallica	120	1
+9	Karmacode	2006	Goth Metal	Lacuna Coil	Lacuna Coil	0	0
+10	Nevermind	1991	Grunge	Nirvana	Nirvana	3	0
+11	Thriller	1982	Pop	Michael Jackson	Michael Jackson	0	0
+12	Brothers in Arms	1985	Rock	Dire Straits	Dire Straits	1	0
