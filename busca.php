@@ -14,12 +14,21 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $t = $t > 1 ? $t . ' itens' : ($t > 0 ? '1 item' : 'nenhum item');
     $totalItensCarrinho = $t;
     
-    $termo = isset($_GET['termo']) ? $_GET['termo'] : '';
-    $tipo = isset($_GET['tipo']) ? $_GET['tipo'] : '';
+    $cds = array();
     
-    // seguir daqui...
+    $termo = isset($_GET['termo']) ? $_GET['termo'] : '';
+    $tipo = isset($_GET['tipo']) ? ucfirst($_GET['tipo']) : '';
+    
+    if(!empty($termo) && !empty($tipo)){
+        $busca = 'getCdBy' . $tipo;
+        $cds = $busca($termo);
+    }
+    
+    $t = count($cds);
+    $t = $t > 1 ? $t . ' cds encontrados' : ($t > 0 ? '1 cd encontrado' : 'nenhum cd encontrado');
+    $totalResults = $t;
     
     require('template' . DS . 'header.php');
-    require('template' . DS . 'index.php');
+    require('template' . DS . 'busca.php');
     require('template' . DS . 'footer.php');
 }

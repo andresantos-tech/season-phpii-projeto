@@ -182,7 +182,12 @@ function getCd($type, $val){
 		} elseif($type === 'all'){
 			$cond = TRUE;
 		} else {
-			$cond = ($val === $cd[$type]);
+			if(is_long($val)){
+				$cond = ($val === $cd[$type]);
+			} else {
+				$cond = (mb_strtolower($val, 'UTF-8') === mb_strtolower($cd[$type], 'UTF-8'));
+			}
+			
 		}
 		
 		if($cond){
@@ -191,6 +196,17 @@ function getCd($type, $val){
 	}
 	
 	return ordenarArrCds($arr, 'titulo');
+}
+
+function getTotalCdsEstoque($id){
+	settype($id, 'integer');
+	$cd = getCdById($id);
+	
+	if(empty($cd)){
+		return 0;
+	}
+	
+	return $cd['qtdEstoque'];
 }
 
 function excluirCd($id){

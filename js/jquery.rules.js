@@ -11,6 +11,12 @@
         if($hash == 'error'){
             $('.alert').show();
         }
-    });    
+    });
+    
+    $('#formBusca ul li a').click(function(){
+        var $val = $(this).attr('href').split('#')[1];
+        $('#tipo').val($val);
+        $('#formBusca').submit();
+    });
     
 })(jQuery);

@@ -1,7 +1,8 @@
                 <div class="boxCarrinho">
                     <h3>Carrinho de compras</h3>
-                    <p class="infoBusca">3 itens no carrinho.</p>
+                    <p class="infoBusca"><?php echo $totalItensCarrinho; ?> no carrinho.</p>
                     
+                <?php if(!empty($carrinho)) : ?>
                     <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
@@ -15,66 +16,22 @@
                             </tr>
                         </thead>
                         <tbody>
+                            
+                        <?php foreach($carrinho as $key=>$itemCarrinho) : ?>
                             <tr>
-                                <td>12</td>
-                                <td><div class="boxImg"><img src="img/fake.jpg" alt="Título" /></div></td>
-                                <td>Título</td>
-                                <td>Autor</td>
-                                <td>2000</td>
-                                <td><input type="text" name="quantidade" id="quantidade-1" class="quantidade input-mini" value="2" /></td>
+                                <td><?php echo $itemCarrinho['produto']['id']; ?></td>
+                                <td><div class="boxImg"><img src="img/fake.jpg" alt="<?php echo htmlspecialchars($itemCarrinho['produto']['titulo']); ?>" /></div></td>
+                                <td><?php echo htmlspecialchars($itemCarrinho['produto']['titulo']); ?></td>
+                                <td><?php echo htmlspecialchars($itemCarrinho['produto']['autor']); ?></td>
+                                <td><?php echo $itemCarrinho['produto']['anoLancamento']; ?></td>
+                                <td><input type="text" name="quantidade" id="quantidade-<?php echo $key; ?>" class="quantidade input-mini" value="<?php echo $itemCarrinho['qtd']; ?>" /></td>
                                 <td>
-                                    <a class="btn btn-primary btn-small" href="#1"><span class="icon-refresh">&nbsp;</span> Atualizar</a>
-                                    <a class="btn btn-danger btn-small" href="#1"><span class="icon-remove">&nbsp;</span> Excluir</a>
+                                    <a class="btn btn-primary btn-small btnAtualizaItemCarrinho" href="#<?php echo $itemCarrinho['produto']['id']; ?>"><span class="icon-refresh">&nbsp;</span> Atualizar</a>
+                                    <a class="btn btn-danger btn-small btnRemoveItemCarrinho" href="#<?php echo $itemCarrinho['produto']['id']; ?>"><span class="icon-remove">&nbsp;</span> Excluir</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>12</td>
-                                <td><div class="boxImg"><img src="img/fake.jpg" alt="Título" /></div></td>
-                                <td>Título</td>
-                                <td>Autor</td>
-                                <td>2000</td>
-                                <td><input type="text" name="quantidade" id="quantidade-1" class="quantidade input-mini" value="2" /></td>
-                                <td>
-                                    <a class="btn btn-primary btn-small" href="#1"><span class="icon-refresh">&nbsp;</span> Atualizar</a>
-                                    <a class="btn btn-danger btn-small" href="#1"><span class="icon-remove">&nbsp;</span> Excluir</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td><div class="boxImg"><img src="img/fake.jpg" alt="Título" /></div></td>
-                                <td>Título</td>
-                                <td>Autor</td>
-                                <td>2000</td>
-                                <td><input type="text" name="quantidade" id="quantidade-1" class="quantidade input-mini" value="2" /></td>
-                                <td>
-                                    <a class="btn btn-primary btn-small" href="#1"><span class="icon-refresh">&nbsp;</span> Atualizar</a>
-                                    <a class="btn btn-danger btn-small" href="#1"><span class="icon-remove">&nbsp;</span> Excluir</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td><div class="boxImg"><img src="img/fake.jpg" alt="Título" /></div></td>
-                                <td>Título</td>
-                                <td>Autor</td>
-                                <td>2000</td>
-                                <td><input type="text" name="quantidade" id="quantidade-1" class="quantidade input-mini" value="2" /></td>
-                                <td>
-                                    <a class="btn btn-primary btn-small" href="#1"><span class="icon-refresh">&nbsp;</span> Atualizar</a>
-                                    <a class="btn btn-danger btn-small" href="#1"><span class="icon-remove">&nbsp;</span> Excluir</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td><div class="boxImg"><img src="img/fake.jpg" alt="Título" /></div></td>
-                                <td>Título</td>
-                                <td>Autor</td>
-                                <td>2000</td>
-                                <td><input type="text" name="quantidade" id="quantidade-1" class="quantidade input-mini" value="2" /></td>
-                                <td>
-                                    <a class="btn btn-primary btn-small" href="#1"><span class="icon-refresh">&nbsp;</span> Atualizar</a>
-                                    <a class="btn btn-danger btn-small" href="#1"><span class="icon-remove">&nbsp;</span> Excluir</a>
-                                </td>
-                            </tr>
+                        <?php endforeach; ?>
+                            
                         </tbody>
                     </table>
                     
@@ -82,6 +39,6 @@
                         <a class="btn btn-large" href="index.php"><span class="icon-shopping-cart">&nbsp;</span> Continuar Comprando</a>
                         <a class="btn btn-primary btn-large" href="#1"><span class="icon-refresh">&nbsp;</span> Atualizar Carrinho</a>
                     </div>
-
+                <?php endif; ?>
                     
                 </div>

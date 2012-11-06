@@ -1,56 +1,27 @@
                 <div class="boxItens">
-                    <h3>Busca por "asasasasasa".</h3>
-                    <p class="infoBusca">3 resultados encontrados.</p>
+                    <h3>Busca por <span>"<?php echo htmlspecialchars($termo); ?>"</span>.</h3>
+                    <p class="infoBusca"><?php echo $totalResults; ?>.</p>
+                    
+                <?php if(!empty($cds)) : ?>
                     <ul>
+                        
+                    <?php foreach($cds as $key=>$cd) : ?>
                         <li>
-                            <div class="boxImg"><a href="produto.php?id=1234"><img src="img/fake.jpg" alt="Título" /></a></div>
-                            <h4>Título</h4>
-                            <p>Gênero - 1999</p>
-                            <a href="produto.php?id=1234" class="btn btn-small"><span class="icon-music">&nbsp;</span> Ver detalhes</a>
-                            <a href="carrinho.php?id=1234" class="btn btn-small"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
+                            <div class="boxImg"><a href="produto.php?id=<?php echo $cd['id']; ?>"><img src="img/fake.jpg" alt="<?php echo htmlspecialchars($cd['titulo']); ?>" /></a></div>
+                            <h4><?php echo htmlspecialchars($cd['titulo']); ?></h4>
+                            <p><?php echo htmlspecialchars($cd['genero']); ?> - <?php echo $cd['anoLancamento']; ?></p>
+                            <a href="produto.php?id=<?php echo $cd['id']; ?>" class="btn btn-small"><span class="icon-music">&nbsp;</span> Ver detalhes</a>
+                            <a href="carrinho.php?add=<?php echo $cd['id']; ?>&qtd=1" class="btn btn-small"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
                         </li>
-                        <li>
-                            <div class="boxImg"><a href="produto.php?id=1234"><img src="img/fake.jpg" alt="Título" /></a></div>
-                            <h4>Título</h4>
-                            <p>Gênero - 1999</p>
-                            <a href="produto.php?id=1234" class="btn btn-small"><span class="icon-music">&nbsp;</span> Ver detalhes</a>
-                            <a href="carrinho.php?id=1234" class="btn btn-small"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
-                        </li>
-                        <li>
-                            <div class="boxImg"><a href="produto.php?id=1234"><img src="img/fake.jpg" alt="Título" /></a></div>
-                            <h4>Título</h4>
-                            <p>Gênero - 1999</p>
-                            <a href="produto.php?id=1234" class="btn btn-small"><span class="icon-music">&nbsp;</span> Ver detalhes</a>
-                            <a href="carrinho.php?id=1234" class="btn btn-small"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
-                        </li>
-                        <li>
-                            <div class="boxImg"><a href="produto.php?id=1234"><img src="img/fake.jpg" alt="Título" /></a></div>
-                            <h4>Título</h4>
-                            <p>Gênero - 1999</p>
-                            <a href="produto.php?id=1234" class="btn btn-small"><span class="icon-music">&nbsp;</span> Ver detalhes</a>
-                            <a href="carrinho.php?id=1234" class="btn btn-small"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
-                        </li>
-                        <li>
-                            <div class="boxImg"><a href="produto.php?id=1234"><img src="img/fake.jpg" alt="Título" /></a></div>
-                            <h4>Título</h4>
-                            <p>Gênero - 1999</p>
-                            <a href="produto.php?id=1234" class="btn btn-small"><span class="icon-music">&nbsp;</span> Ver detalhes</a>
-                            <a href="carrinho.php?id=1234" class="btn btn-small"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
-                        </li>
-                        <li>
-                            <div class="boxImg"><a href="produto.php?id=1234"><img src="img/fake.jpg" alt="Título" /></a></div>
-                            <h4>Título</h4>
-                            <p>Gênero - 1999</p>
-                            <a href="produto.php?id=1234" class="btn btn-small"><span class="icon-music">&nbsp;</span> Ver detalhes</a>
-                            <a href="carrinho.php?id=1234" class="btn btn-small"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
-                        </li>
-                        <li>
-                            <div class="boxImg"><a href="produto.php?id=1234"><img src="img/fake.jpg" alt="Título" /></a></div>
-                            <h4>Título</h4>
-                            <p>Gênero - 1999</p>
-                            <a href="produto.php?id=1234" class="btn btn-small"><span class="icon-music">&nbsp;</span> Ver detalhes</a>
-                            <a href="carrinho.php?id=1234" class="btn btn-small"><span class="icon-shopping-cart">&nbsp;</span> Adicionar ao carrinho</a>
-                        </li>
+                        
+                        <?php if(($key + 1) % 3 == 0) : ?>
+                            <li class="line">&nbsp;</li>
+                        <?php endif; ?>
+                        
+                    <?php endforeach; ?>
+                        
                     </ul>
+                <?php endif; ?>
+
                     <br clear="all" />
                 </div>
